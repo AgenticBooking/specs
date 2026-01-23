@@ -2,6 +2,8 @@
 
 Domain semantics for AI agent discovery and booking in hospitality. Defines venues, booking terms, trust, and lifecycle — what Ai agents need to understand and book places to eat, drink, stay, and play.
 
+Its much easier to view these at https://agenticbooking.org
+
 ---
 
 ## The New Opportunity
@@ -294,8 +296,6 @@ We're not precious about this. If something doesn't work, say so.
 
 These specifications are led by [Selfe](https://selfe.ai), building AI-native hospitality infrastructure.
 
-**Selfe Ltd**
-20-22 Wenlock Road, London, N1 7GU, United Kingdom
 [selfe.ai](https://selfe.ai) · [hello@agenticbooking.org](mailto:hello@agenticbooking.org)
 
 Questions? [Open an issue](https://github.com/AgenticBooking/specs/issues) or email us.
