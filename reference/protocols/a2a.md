@@ -12,7 +12,7 @@ How Agentic Booking uses Google's Agent-to-Agent protocol.
 
 ## What is A2A?
 
-[A2A](https://google.github.io/A2A/) (Agent-to-Agent) is Google's open protocol for agent interoperability. It defines how AI agents discover each other, negotiate capabilities, and communicate.
+[A2A](https://a2a-protocol.org/) (Agent-to-Agent) is Google's open protocol for agent interoperability. It defines how AI agents discover each other, negotiate capabilities, and communicate.
 
 ::card-group{cols="2"}
   ::card{title="Agent Cards" icon="ph:identification-card"}
@@ -187,5 +187,6 @@ A2A provides the agent layer. [UCP](/reference/protocols/ucp) provides commerce 
 
 ## Resources
 
-- [A2A Protocol](https://google.github.io/A2A/)
+- [A2A Protocol](https://a2a-protocol.org/)
 - [A2A GitHub](https://github.com/google/A2A)
+- [IEEE P3709](/reference/protocols/p3709)
