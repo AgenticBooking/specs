@@ -112,6 +112,37 @@ This is what "guests own their data" means in practice. A guest's booking histor
 
 ---
 
+## Commercial Roles
+
+When a guest books through an agent, who is selling? Who is liable?
+
+::card-group{cols="3"}
+  ::card{title="Merchant of Record" icon="storefront"}
+  The party who receives payment and appears on the guest's statement. Handles refunds and disputes.
+  ::
+  ::card{title="Service Provider" icon="building-2"}
+  The venue delivering the stay, meal, or experience. Responsible for service quality.
+  ::
+  ::card{title="Facilitator" icon="git-branch"}
+  Platform infrastructure connecting parties. Provides tooling without customer-facing liability.
+  ::
+::
+
+These roles determine:
+
+- Who the guest's contract is with
+- Who processes refunds
+- Who defends chargebacks
+- Who bears consumer protection obligations
+
+::callout{type="info"}
+Commercial roles are declared, not assumed. A booking must specify who is Merchant of Record so all parties understand the liability chain.
+::
+
+See [Settlement Spec](/reference/folio/settlement) for technical details on role declarations and refund authority.
+
+---
+
 ## Learn More
 
 ::card-group

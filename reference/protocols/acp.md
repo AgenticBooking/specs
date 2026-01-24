@@ -139,6 +139,46 @@ ACP's SharedPaymentToken (SPT) allows agents to store and reuse payment credenti
 
 ---
 
+## SPT Hospitality Requirements
+
+Current SPT implementations support `expires_at` (don't charge after this date) but hospitality requires additional constraints:
+
+| Field | Purpose | Current SPT | Hospitality Need |
+|-------|---------|-------------|------------------|
+| `expires_at` | Don't charge after | Supported | Sufficient |
+| `valid_from` | Don't charge before | Not supported | Required |
+| `max_amount` | Maximum chargeable | Supported | Sufficient |
+| `condition` | Charge only if | Not supported | Required |
+
+### The Gap
+
+A hotel booking with "balance due 14 days before check-in" needs:
+
+```json
+{
+  "spt": {
+    "amount": 24000,
+    "currency": "gbp",
+    "valid_from": "2026-03-01",
+    "expires_at": "2026-03-15"
+  }
+}
+```
+
+Without `valid_from`, there's no way to prevent early collection of the balance payment. This matters for:
+
+- **Balance payments**: Should not be collected until the due date
+- **No-show charges**: Only valid after check-in time has passed
+- **Incidental holds**: Only valid during the stay window
+
+::callout{type="warning"}
+This gap is being addressed through hospitality protocol extensions. Implementations should validate timing constraints at the application layer until SPT natively supports `valid_from`.
+::
+
+See [Settlement Spec](/reference/folio/settlement#7-payment-token-requirements) for the full hospitality payment token requirements.
+
+---
+
 ## Implementation Pattern
 
 ```
