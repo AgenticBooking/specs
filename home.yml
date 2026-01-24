@@ -2,12 +2,12 @@
 # Edit this file to update the landing page
 
 meta:
-  title: "Open Standards for AI Agentic Booking"
-  description: "Open standards that give AI agents a common language for discovering, trusting, and booking hotels, restaurants, and experiences."
+  title: "Open Protocols for AI Agentic Booking"
+  description: "Extending A2A and UCP for booking, so that AI agents can discover and book hotels, restaurants, and experiences."
 
 hero:
-  title: "Open Standards for Agentic Booking"
-  subtitle: "Giving AI agents a common language for discovering, trusting, and booking hotels, restaurants, and experiences."
+  title: "Open Protocols for Agentic Booking"
+  subtitle: "Extending A2A and UCP for booking, so that AI agents can discover and book hotels, restaurants, and experiences."
   cta:
     primary:
       label: "Read the Docs"
@@ -71,7 +71,7 @@ faqs:
     answer: "Venues don't need to read specs. Your technology provider or property management system will handle the implementation. The documentation is there so they know what to build."
 
   - question: "Who's building this?"
-    answer: "It's an open standard. The specs are on GitHub. Anyone can read them, propose changes, or help improve the documentation. We're building this together."
+    answer: "These are open protocols. The specs are on GitHub. Anyone can read them, propose changes, or help improve the documentation. We're building this together."
 
 cta:
   title: "Ready to enable agentic booking?"
