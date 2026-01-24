@@ -54,7 +54,7 @@ Agent fetches Venue definitions
 Agent evaluates fit, recommends, books
 ```
 
-**[→ Curator specification](/curator)**
+**[→ Curator specification](/building-blocks/curator)**
 
 ---
 
@@ -75,7 +75,7 @@ Venue
 └── Answers         Quotable explanations
 ```
 
-**[→ Venue specification](/venue)**
+**[→ Venue specification](/building-blocks/venue)**
 
 ---
 
@@ -99,7 +99,7 @@ Folio
 └── Mandate             Proof of agreement
 ```
 
-**[→ Folio specification](/folio)**
+**[→ Folio specification](/building-blocks/folio)**
 
 ---
 
@@ -113,7 +113,7 @@ Request → Available → Held → Booked → Confirmed → Arrived → Stayed �
 
 Plus: `Modified`, `Cancelled`, `No-Show` as branch states.
 
-**[→ Stay specification](/stay)**
+**[→ Stay specification](/building-blocks/stay)**
 
 ---
 
@@ -134,7 +134,7 @@ Bookable
 
 Could apply beyond hospitality.
 
-**[→ Bookable specification](/bookable)**
+**[→ Bookable specification](/building-blocks/bookable)**
 
 ---
 
@@ -189,10 +189,11 @@ These specs define hospitality semantics. They are designed to be expressed over
 
 | Protocol | Role |
 |----------|------|
-| [A2A](https://google.github.io/A2A/) / [MCP](https://modelcontextprotocol.io/) | Transport |
+| [A2A](https://a2a-protocol.org/) / [MCP](https://modelcontextprotocol.io/) | Transport |
 | [AP2](https://ap2-protocol.org/) | Payment authorization |
 | [UCP](https://ucp.dev) | Commerce lifecycle orchestration |
 | [ACP](https://stripe.com/docs/acp) | Agent coordination |
+| [IEEE P3709](https://standards.ieee.org/) | Agent governance |
 | REST | Direct HTTP |
 
 The specs define WHAT hospitality commerce means. Protocols define HOW it moves.
@@ -207,7 +208,7 @@ Google's [Universal Commerce Protocol](https://ucp.dev) launched January 2026 as
 | Folio | `dev.ucp.hospitality.folio` |
 | Stay | `dev.ucp.hospitality.stay` |
 
-See [UCP Integration](/docs/ucp-integration.md) for details.
+See [UCP Protocol](/reference/protocols/ucp) for details.
 
 This is one binding, not the only one.
 
@@ -216,16 +217,16 @@ This is one binding, not the only one.
 ## Getting started
 
 **If you're a venue** wanting to be AI-bookable:
-→ Start with [Venue](/venue)
+→ Start with [Venue](/building-blocks/venue)
 
 **If you're a DMO or authority** wanting to curate venues:
-→ Start with [Curator](/curator)
+→ Start with [Curator](/building-blocks/curator)
 
 **If you're integrating payments**:
-→ Start with [Folio](/folio)
+→ Start with [Folio](/building-blocks/folio)
 
 **If you're building agent tooling**:
-→ Start with [Bookable](/bookable)
+→ Start with [Bookable](/building-blocks/bookable)
 
 ---
 
@@ -234,36 +235,39 @@ This is one binding, not the only one.
 ```
 /
 ├── README.md
-├── LICENSE.md
+├── LICENSE
 ├── CONTRIBUTING.md
 │
-├── /bookable                    # Base pattern
-│   ├── README.md
-│   └── /spec
+├── /introduction               # Overview, how it works, roadmap
 │
-├── /curator                     # Discovery layer
-│   ├── README.md
-│   └── /spec
+├── /building-blocks            # Core concepts
+│   ├── bookable.md             # Base pattern
+│   ├── venue.md                # Hospitality identity
+│   ├── curator.md              # Discovery layer
+│   ├── stay.md                 # Booking lifecycle
+│   └── folio.md                # Guest account
 │
-├── /venue                       # Hospitality identity
-│   ├── README.md
-│   └── /spec
+├── /trust                      # Trust & verification
+│   ├── identity.md             # DIDs, ownership
+│   ├── evidence.md             # Claims with provenance
+│   ├── credentials.md          # Verifiable credentials
+│   └── threat-model.md         # Security considerations
 │
-├── /folio                       # Guest account / payment semantics
-│   ├── README.md
-│   └── /spec
+├── /audiences                  # Role-specific guides
+│   ├── venues.md
+│   ├── curators.md
+│   ├── dmos.md
+│   ├── agent-builders.md
+│   └── enterprise.md
 │
-├── /stay                        # Lifecycle states
-│   ├── README.md
-│   └── /spec
-│
-└── /docs
-    ├── getting-started.md
-    ├── identity-and-trust.md
-    ├── for-dmos.md
-    ├── ucp-integration.md
-    ├── curator-manifesto.md
-    └── roadmap.md
+└── /reference                  # Detailed specs
+    ├── /bookable
+    ├── /venue
+    ├── /curator
+    ├── /stay
+    ├── /folio
+    ├── /identity
+    └── /protocols              # A2A, UCP, AP2, ACP, P3709
 ```
 
 ---
@@ -306,5 +310,5 @@ Questions? [Open an issue](https://github.com/AgenticBooking/specs/issues) or em
   <br />
   <em>Domain semantics for agentic booking</em>
   <br /><br />
-  <a href="./docs/getting-started.md">Get Started</a> · <a href="./docs/roadmap.md">Roadmap</a> · <a href="./CONTRIBUTING.md">Contribute</a>
+  <a href="/introduction/overview">Get Started</a> · <a href="/introduction/roadmap">Roadmap</a> · <a href="./CONTRIBUTING.md">Contribute</a>
 </p>
